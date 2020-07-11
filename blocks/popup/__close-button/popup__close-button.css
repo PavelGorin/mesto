@@ -1,0 +1,16 @@
+.popup__close-button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  right: -475px;
+  top: -180px;
+}
+
+.popup__close-button:hover {
+  opacity: 0.6;
+}

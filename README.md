@@ -4,7 +4,7 @@
 БЭМ. Файловая структура так же построена по БЭМ. Сайт адаптивен. 
 Проект служит демонстрацией освоенных технологий web-разработки.
 Адрес сайта в интернете:
-https://pavelgorin.github.io/mesto/index.html
+https://pavelgorin.github.io/mesto/
 Макет в Figme:
 https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4
 

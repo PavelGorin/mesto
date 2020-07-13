@@ -12,68 +12,71 @@
   <div class="page">
     <header class="header">
       <img class="header__logo" src="./images/header__logo.svg" alt="логотип">
-      <img class="header__line" src="./images/header__line.svg" alt="линия">
     </header>
     <section class="profile">
-      
+
       <img class="profile__avatar" src="./images/profile__avatar.png" alt="Жак-Ив Кусто">
       <div class="profile__info">
         <p class="profile__name">Жак-Ив Кусто</p>
-        <button class="profile__edit-button"><img  src="./images/profile__edit-button.svg" alt="кнопка редактирования"></button>
+        <button type="button" class="profile__edit-button"><img src="./images/profile__edit-button.svg"
+            alt="кнопка редактирования"></button>
         <p class="profile__profession">Исследователь океана</p>
       </div>
-      
-      <button class="profile__add-button"><img  src="./images/profile__add-button.svg" alt="кнопка добаления профайла"></button>
+
+      <button type="button" class="profile__add-button"><img src="./images/profile__add-button.svg"
+          alt="кнопка добаления профайла"></button>
     </section>
 
     <section class="elements">
       <div class="element">
-          <img class="element__image" src="./images/element__karachaevsk.png" alt="вид крепости в Карачаевске">
-          <p class="element__name" >Карачаевск<img class="element__like" src="./images/element__like.svg" alt="лайк"></p>
+        <img class="element__image" src="./images/element__karachaevsk.png" alt="вид крепости в Карачаевске">
+        <p class="element__name">Карачаевск<button type="button" class="element__like"><img
+              src="./images/element__like.svg" alt="лайк"></button></p>
       </div>
       <div class="element">
-          <img class="element__image" src="./images/element__elbrus.png" alt="гора Эльбрус">
-          <p class="element__name" >Гора Эльбрус<img class="element__like" src="./images/element__like.svg" alt="лайк"></p>
-          
+        <img class="element__image" src="./images/element__elbrus.png" alt="гора Эльбрус">
+        <p class="element__name">Гора Эльбрус<button type="button" class="element__like"><img
+              src="./images/element__like.svg" alt="лайк"></button></p>
+
       </div>
       <div class="element">
-          <img class="element__image" src="./images/element__dombay.png" alt="вид Домбай">
-          <p class="element__name" >Домбай<img class="element__like" src="./images/element__like.svg" alt="лайк"></p>
-          
+        <img class="element__image" src="./images/element__dombay.png" alt="вид Домбай">
+        <p class="element__name">Домбай<button type="button" class="element__like"><img src="./images/element__like.svg"
+              alt="лайк"></button></p>
+
       </div>
       <div class="element">
-          <img class="element__image" src="./images/element__aurora.png" alt="Аврора">
-          <p class="element__name" >Аврора<img class="element__like" src="./images/element__like.svg" alt="лайк"></p>
-          
+        <img class="element__image" src="./images/element__aurora.png" alt="Аврора">
+        <p class="element__name">Аврора<button type="button" class="element__like"><img src="./images/element__like.svg"
+              alt="лайк"></button></p>
+
       </div>
       <div class="element">
-          <img class="element__image" src="./images/element__hermitage.png" alt="Эрмитаж">
-          <p class="element__name" >Эрмитаж<img class="element__like" src="./images/element__like.svg" alt="лайк"></p>
-          
+        <img class="element__image" src="./images/element__hermitage.png" alt="Эрмитаж">
+        <p class="element__name">Эрмитаж<button type="button" class="element__like"><img
+              src="./images/element__like.svg" alt="лайк"></button></p>
+
       </div>
       <div class="element">
-          <img class="element__image" src="./images/element__petrodvorec.png" alt="Петродворец">
-          <p class="element__name" >Петродворец<img class="element__like" src="./images/element__like.svg" alt="лайк"></p>
-          
+        <img class="element__image" src="./images/element__petrodvorec.png" alt="Петродворец">
+        <p class="element__name">Петродворец<button type="button" class="element__like"><img
+              src="./images/element__like.svg" alt="лайк"></button></p>
+
       </div>
     </section>
   </div>
   <footer class="footer">
     <p class="footer__copyright">&copy;2020 Mesto Russia</p>
   </footer>
-  <section class="popup" type="submit">
-    <button class="popup__close-button"><img src="./images/popup__close-button.svg" alt="кнопка закрытия формы"></button>
-    <div class="popup__conteiner" >
-      
+  <section class="popup">
+    <button type="button" class="popup__close-button"><img src="./images/popup__close-button.svg"
+        alt="кнопка закрытия формы"></button>
+    <form action="name" class="popup__container">
       <p class="popup__title">Редактировать профиль</p>
-      <input class="popup__name" type="text">
-      <img class="popup__line" src="./images/header__line.svg" alt="линия разделитель формы">
-      <input class="popup__profession" type="text">
-      <img class="popup__line" src="./images/header__line.svg" alt="линия разделитель формы">
-      <button class="popup__save-button" >Сохранить</button>
-      
-    </div>
-    
+      <input class="popup__input popup__name " type="text">
+      <input class="popup__input popup__profession " type="text">
+      <button class="popup__save-button" type="submit">Сохранить</button>
+    </form>
   </section>
   <script src="./script.js"></script>
 </body>

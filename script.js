@@ -21,13 +21,14 @@ function closePopup() {
 
 closeButton.addEventListener('click', closePopup);
 
-let formElement = document.querySelector('.popup__save-button'); 
+let formElement = document.querySelector('.popup__container'); 
 
 function formSubmitHandler (evt) {
     evt.preventDefault(); 
     profileName.textContent = popupName.value ;
     profileProfession.textContent = popupProfession.value ;
     popup.style.display = 'none';
+    console.log('123');
 }
 
-formElement.addEventListener('click', formSubmitHandler);
+formElement.addEventListener('submit', formSubmitHandler);

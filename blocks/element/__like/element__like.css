@@ -1,5 +1,9 @@
 .element__like {
-  margin-top: 5px;
   float: right;
-  padding-left: 2px;
+  border: none;
+  background: white;
+}
+
+.element__like:hover {
+  opacity: 0.6;  
 }

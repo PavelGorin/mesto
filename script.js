@@ -28,7 +28,6 @@ function formSubmitHandler (evt) {
     profileName.textContent = popupName.value ;
     profileProfession.textContent = popupProfession.value ;
     popup.style.display = 'none';
-    console.log('123');
 }
 
 formElement.addEventListener('submit', formSubmitHandler);

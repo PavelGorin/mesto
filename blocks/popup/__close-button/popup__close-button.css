@@ -7,8 +7,8 @@
   overflow: visible;
   padding: 0;
   position: relative;
-  right: -475px;
-  top: -180px;
+  right: -57px;
+  top: -247px;
 }
 
 .popup__close-button:hover {
@@ -17,6 +17,7 @@
 
 @media screen and (max-width: 600px) {
   .popup__close-button {
-    right: -260px;
+    right: -200px;
+    top: -300px;
   }
 }

@@ -9,10 +9,9 @@
   border-bottom: #545454 solid 1px;
 }
 
-
 @media screen and (max-width: 900px) {
   .header {
-    width: 582px;
+   max-width: 582px;
     padding-top: 35px;
     padding-bottom: 37px;
   }
@@ -20,7 +19,7 @@
 
 @media screen and (max-width: 600px) {
   .header {
-    width: 282px;
+    max-width: 282px;
     padding-top: 28px;
     padding-bottom: 31px;
   }

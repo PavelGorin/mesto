@@ -3,8 +3,6 @@
 @import url(./__like/element__like.css);
 
 .element {
-  width: 282px;
-  height: 361px;
   border-radius: 10px;
   background: white;
 }

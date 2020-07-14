@@ -11,7 +11,7 @@
   border-radius: 2px;
   border: black;
   color: white;
-  bottom: -36px;
+  bottom: -16px;
   left: 36px;
 }
 
@@ -22,6 +22,7 @@
 @media screen and (max-width: 600px) {
   .popup__save-button {
     width: 225px;
+    bottom: -40px;
     left: 10px;
   }
 }

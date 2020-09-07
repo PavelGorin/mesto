@@ -28,59 +28,55 @@
     </section>
 
     <section class="elements">
-      <div class="element">
-        <img class="element__image" src="./images/element__karachaevsk.png" alt="вид крепости в Карачаевске">
-        <p class="element__name">Карачаевск<button type="button" class="element__like"><img
-              src="./images/element__like.svg" alt="лайк"></button></p>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/element__elbrus.png" alt="гора Эльбрус">
-        <p class="element__name">Гора Эльбрус<button type="button" class="element__like"><img
-              src="./images/element__like.svg" alt="лайк"></button></p>
 
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/element__dombay.png" alt="вид Домбай">
-        <p class="element__name">Домбай<button type="button" class="element__like"><img src="./images/element__like.svg"
-              alt="лайк"></button></p>
-
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/element__aurora.png" alt="Аврора">
-        <p class="element__name">Аврора<button type="button" class="element__like"><img src="./images/element__like.svg"
-              alt="лайк"></button></p>
-
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/element__hermitage.png" alt="Эрмитаж">
-        <p class="element__name">Эрмитаж<button type="button" class="element__like"><img
-              src="./images/element__like.svg" alt="лайк"></button></p>
-
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/element__petrodvorec.png" alt="Петродворец">
-        <p class="element__name">Петродворец<button type="button" class="element__like"><img
-              src="./images/element__like.svg" alt="лайк"></button></p>
-
-      </div>
     </section>
   </div>
   <footer class="footer">
     <p class="footer__copyright">&copy;2020 Mesto Russia</p>
   </footer>
   <section class="popup">
-    
+
     <form name="form" class="popup__container">
-      
+
       <p class="popup__title">Редактировать профиль</p>
       <input class="popup__input popup__name " type="text">
       <input class="popup__input popup__profession " type="text">
       <button class="popup__save-button" type="submit">Сохранить</button>
-      <button type="button" class="popup__close-button"><img src="./images/popup__close-button.svg"
-        alt="кнопка закрытия формы"></button>
+      <button type="button" class="popup__close-button"></button>
     </form>
-    
+
   </section>
+
+  <section class="popup popup__new-place">
+    <form name="form" class="popup__container popup__newplace-form">
+      <p class="popup__title">Новое место</p>
+      <input class="popup__input popup__place " type="text">
+      <input class="popup__input popup__link " type="text">
+      <button class="popup__save-button popup__save-newplace" type="submit">Создать</button>
+      <button type="button" class="popup__close-button popup__close_new"></button>
+    </form>
+  </section>
+
+  <section class="image">
+    <div class="image__popup">
+      <div class="image__container">
+        <img class="image__picture" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="">
+        <p class="image__name">Taugil Taugil Taugil</p>
+      </div>
+      <button type="button" class="popup__close-button image__close-button"></button>
+    </div>
+  </section>
+
+  <template class="card">
+    <div class="element">
+      <button class="element__picture"><img class="element__image" src="" alt=""></button>
+      <button class="element__trash-bin"><img src="./images/element__trash-bin.svg" alt="Мусорное ведро"></button>
+      <div class="element__info">
+        <p class="element__name"></p>
+        <button type="button" class="element__like"><img src="./images/element__like.svg" alt="лайк"></button>
+      </div>
+    </div>
+  </template>
   <script src="./script.js"></script>
 </body>
 

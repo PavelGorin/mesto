@@ -9,6 +9,9 @@
   position: relative;
   right: -57px;
   top: -247px;
+  background-image: url(../../../images/popup__close-button.svg);
+  width: 45px;
+  height: 45px;
 }
 
 .popup__close-button:hover {
@@ -17,7 +20,10 @@
 
 @media screen and (max-width: 600px) {
   .popup__close-button {
-    right: -200px;
-    top: -300px;
+    right: -236px;
+    top: -288px;
+    background-image: url(../../../images/popup__close-button_mobile.svg);
+    width: 35px;
+    height: 35px;
   }
 }

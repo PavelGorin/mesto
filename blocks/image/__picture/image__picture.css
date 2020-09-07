@@ -1,0 +1,14 @@
+.image__picture {
+  display: inline;
+  padding-top: 55px;
+  max-width: 75vw;
+  max-height: 75vh;
+  margin-left: 45px;
+}
+
+@media screen and (max-width: 600px) {
+  .image__picture {
+    margin-left: 35px;
+    max-width: 240px;
+  }
+}

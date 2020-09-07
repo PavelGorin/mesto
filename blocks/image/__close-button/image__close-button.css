@@ -1,0 +1,15 @@
+.image__close-button {
+  right: 10px;
+  top: 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .image__close-button {
+    right: 6px;
+    top: 20px;
+    background-image: url(../../../images/popup__close-button_mobile.svg);
+    width: 35px;
+    height: 35px;
+  }
+}

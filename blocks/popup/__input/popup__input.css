@@ -15,7 +15,13 @@
 
 @media screen and (max-width: 600px) {
   .popup__input {
-    width: 225px;
-    margin-left: 10px;
+    width: 200px;
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 15px;
+    height: 12px;
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

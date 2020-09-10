@@ -4,7 +4,7 @@
 @import url(./__popup/image__popup.css);
 
 .image {
-  display: none;
+  display: flex;
   position: fixed ;
   background: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -14,6 +14,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1.2s, opacity 1.2s;
 }
-
-

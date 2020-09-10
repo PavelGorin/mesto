@@ -1,0 +1,5 @@
+.popup__new-place {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1.2s, opacity 1.2s;
+}

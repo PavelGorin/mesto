@@ -6,9 +6,9 @@ let popupProfession = popup.querySelector('.popup__profession');
 let profileName = document.querySelector('.profile__name');
 let profileProfession = document.querySelector('.profile__profession');
 
-
 function openPopup() {
-  popup.style.display = 'flex';
+  popup.style.visibility = 'visible';
+  popup.style.opacity = '1';
   popupName.value = profileName.textContent;
   popupProfession.value = profileProfession.textContent;
 }
@@ -16,7 +16,8 @@ function openPopup() {
 editButton.addEventListener('click', openPopup);
 
 function closePopup() {
-  popup.style.display = 'none';
+  popup.style.visibility = 'hidden';
+  popup.style.opacity = '0';
 }
 
 closeButton.addEventListener('click', closePopup);
@@ -27,30 +28,30 @@ function formSubmitHandler(evt) {
   evt.preventDefault();
   profileName.textContent = popupName.value;
   profileProfession.textContent = popupProfession.value;
-  popup.style.display = 'none';
+  closePopup();
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
 
-
-
 // Code for popups new Place
 
-let popupNewPlace = document.querySelector('.popup__new-place');
-let popupPlace = document.querySelector('.popup__place');
-let popupLink = popupNewPlace.querySelector('.popup__link');
-let addButton = document.querySelector('.profile__add-button');
-let closeButtonNewPlace = popupNewPlace.querySelector('.popup__close_new');
+const popupNewPlace = document.querySelector('.popup__new-place');
+const popupPlace = document.querySelector('.popup__place');
+const popupLink = popupNewPlace.querySelector('.popup__link');
+const addButton = document.querySelector('.profile__add-button');
+const closeButtonNewPlace = popupNewPlace.querySelector('.popup__close_new');
 
 function openPopupNewPlace() {
-  popupNewPlace.style.display = 'flex';
+  popupNewPlace.style.visibility = 'visible';
+  popupNewPlace.style.opacity = '1';
   popupPlace.value = 'Название';
   popupLink.value = 'Ссылка на картинку';
 }
 addButton.addEventListener('click', openPopupNewPlace);
 
 function closePopupNewPlace() {
-  popupNewPlace.style.display = 'none';
+  popupNewPlace.style.visibility = 'hidden';
+  popupNewPlace.style.opacity = '0';
 }
 
 closeButtonNewPlace.addEventListener('click', closePopupNewPlace);
@@ -88,44 +89,67 @@ const initialCards = [
     name: 'Байкал',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   } 
-];
+];  
 
-const renderList = () => {
+const renderList = () => { // create start page function
   const items = initialCards.map(el => getItem(el));
   elList.append(... items );
 };
 
-const cardRemover = evt => {
+const cardRemover = evt => {  // card remover function
     evt.target.closest('.element').remove();
 }
 
-const   getItem = data => {
+const imagepopup = document.querySelector('.image');
+const imagepicture = imagepopup.querySelector('.image__picture');
+const imagename = imagepopup.querySelector('.image__name');
+const imagepopupclosebutton = imagepopup.querySelector('.image__close-button');
+
+const   getItem = data => {  // Create new card function
   const newcards = card.content.cloneNode(true);
+  const popupimage = newcards.querySelector('.element__picture');
   const trashbin = newcards.querySelector('.element__trash-bin');
   newcards.querySelector('.element__name').innerText = data.name;
   newcards.querySelector('.element__image').src = data.link;
   newcards.querySelector('.element__image').alt = data.name;
 
-  newcards.querySelector('.element__like').addEventListener('click', function (evt) {
+  newcards.querySelector('.element__like').addEventListener('click', function (evt) { // like dislike function
    evt.target.classList.toggle('element__like_active');
   });
-  
-  trashbin.addEventListener('click', cardRemover);
 
+  function openPopupImage() {  // Open popup image
+      imagepopup.style.visibility = 'visible';
+    imagepopup.style.opacity = '1';
+    imagepicture.src = data.link;
+    imagename.innerText = data.name;
+  }
+
+  function closePopupImage() {  // close popup image
+    imagepopup.style.visibility = 'hidden';
+    imagepopup.style.opacity = '0';
+  }
+
+  imagepopupclosebutton.addEventListener('click', closePopupImage);
+  trashbin.addEventListener('click', cardRemover);
+  popupimage.addEventListener('click', openPopupImage);
+  
   return newcards;
 };
 
 
-const  addNewPlace = () => {
-  addButtonNewPlace.addEventListener('submit', () => {
+const  addNewPlace = () => {  // add new card from user
+  addButtonNewPlace.addEventListener('submit', (evt) => {
+    evt.preventDefault();
     const newcard = getItem({
       name: popupPlace.value,
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+      link: popupLink.value
     });
-    console.log(neewcard);
+    
+    closePopupNewPlace();
     elList.prepend(newcard);
+    
   })
-};
+}; 
   
 renderList();
 addNewPlace();

@@ -9,6 +9,6 @@
 @media screen and (max-width: 600px) {
   .image__picture {
     margin-left: 35px;
-    max-width: 240px;
+    max-width: 280px;
   }
 }

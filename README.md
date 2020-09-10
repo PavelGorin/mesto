@@ -10,6 +10,6 @@ https://pavelgorin.github.io/mesto/
 https://pavelgorin.github.io/mesto
 >>>>>>> 125015db2441ccc6df930070ab3962790edc04ac
 Макет в Figme:
-https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4
+https://www.figma.com/file/nlYpT4VhFiwimn2YlncrcF/JavaScript.-Sprint-5?node-id=125%3A0 
 
 

@@ -3,6 +3,7 @@
   border: none;
   background: white;
   padding: 0;
+  cursor: pointer;
 }
 
 .element__like:hover {

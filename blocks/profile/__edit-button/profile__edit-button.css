@@ -5,6 +5,7 @@
   margin-top: 17px;
   margin-left: 17px;
   border: white 1px solid;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {

@@ -3,7 +3,7 @@
   margin: auto;
   padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 18px;
   grid-row-gap: 21px;
 }
@@ -13,6 +13,7 @@
 @media screen and (max-width: 900px) {
   .elements {
     width: 582px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -21,5 +22,6 @@
     width: 282px;
     grid-row-gap: 20px;
     padding-top: 0;
+    grid-template-columns: 1fr;
   }
 }

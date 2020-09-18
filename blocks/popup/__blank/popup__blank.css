@@ -1,0 +1,14 @@
+.popup__blank {
+  max-width: 430px;
+  height: 330px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-left: 32px;
+}
+
+@media screen and (max-width: 600px) {
+  .popup__blank {
+    max-width: 240px;
+    height: 258px;
+  }
+}

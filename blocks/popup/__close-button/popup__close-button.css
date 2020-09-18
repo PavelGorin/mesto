@@ -1,17 +1,16 @@
 .popup__close-button {
   background: none;
   border: 0;
-  color: inherit;
-  font: inherit;
   line-height: normal;
   overflow: visible;
   padding: 0;
   position: relative;
-  right: -57px;
-  top: -247px;
+  right: 10px;
+  top: -48px;
   background-image: url(../../../images/popup__close-button.svg);
   width: 45px;
   height: 45px;
+  cursor: pointer;
 }
 
 .popup__close-button:hover {
@@ -20,8 +19,8 @@
 
 @media screen and (max-width: 600px) {
   .popup__close-button {
-    right: -30px;
-    top: -194px;
+    right: -7;
+    top: -35px;
     background-image: url(../../../images/popup__close-button_mobile.svg);
     width: 35px;
     height: 35px;

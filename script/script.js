@@ -160,4 +160,3 @@ function submitAddCardForm(evt) { // function for create new card
 addButtonNewPlace.addEventListener('submit', submitAddCardForm);
   
 renderInitialCards();
-submitAddCardForm();

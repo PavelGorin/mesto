@@ -7,8 +7,7 @@ const profileName = document.querySelector('.profile__name');
 const profileProfession = document.querySelector('.profile__profession');
 
 function openPopup(block) {
-  block.classList.add('popup__opened');
-  block.classList.remove('popup'); // Без этой строчки функция не работает.Tак задуманно переключение классов.
+  block.classList.add('popup_opened');
 }
 
 function openPopupProfile() {
@@ -20,7 +19,7 @@ function openPopupProfile() {
 editButton.addEventListener('click', openPopupProfile);
 
 function closePopup(block) {
-  block.classList.add('popup');
+  block.classList.remove('popup_opened');
 }
 
 function closePopupProfile() {
@@ -95,7 +94,7 @@ const initialCards = [
     name: 'Байкал',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   } 
-];  
+];
 
 const imagePopup = document.querySelector('.popup__image');
 const imagePicture = imagePopup.querySelector('.popup__picture');

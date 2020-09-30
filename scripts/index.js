@@ -8,6 +8,8 @@ const profileProfession = document.querySelector('.profile__profession');
 
 function openPopup(block) {
   block.classList.add('popup_opened');
+  document.addEventListener('keydown', closePopupByEscape);
+  document.addEventListener('click', closePopupByOverlay);
 }
 
 function openPopupProfile() {
@@ -20,6 +22,19 @@ editButton.addEventListener('click', openPopupProfile);
 
 function closePopup(block) {
   block.classList.remove('popup_opened');
+}
+
+function closePopupByEscape (evt) {
+  const esc = document.querySelector('.popup_opened');
+  if (evt.key === 'Escape') {
+    closePopup(esc);
+  }
+}
+
+function closePopupByOverlay(evt) {
+  if (evt.target.closest('.popup')) {
+    closePopup(evt.target);
+  }
 }
 
 function closePopupProfile() {

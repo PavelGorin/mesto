@@ -56,7 +56,6 @@ const addCard = (event) => {
     const element = card.getElement();
     config.cardsList.prepend(element);
     closePopupNewPlace(); 
-    openPopupImage()
 }
 
 config.newPlace.addEventListener('submit', addCard);

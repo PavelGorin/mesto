@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Mesto</title>
+  <script src="./scripts/index.js" type="module" defer></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
     <p class="footer__copyright">&copy;2020 Gorin Pavel</p>
   </footer>
   <section class="popup popup__profile">
-    <form  action="#" class="popup__container" method="post" novalidate >
+    <form  action="#" class="popup__container popup__container_profile" method="post" novalidate >
       <div class="popup__blank">
         <p class="popup__title">Редактировать профиль</p>
         <input class="popup__input popup__name" id="popup-name" name="popup-name" type="text" placeholder="Имя" required minlength="2" maxlength="40">
@@ -79,8 +80,6 @@
       </div>
     </div>
   </template>
-  <script src="./scripts/index.js" defer></script>
-  <script src="./scripts/validate.js" defer></script>
 </body>
 
 </html>

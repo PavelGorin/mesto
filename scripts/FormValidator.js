@@ -63,6 +63,11 @@ _setEventListeners() {
   this._toggleButtonState(inputList, buttonElement);
 };
 
+disabledButton(buttonElement) {
+  buttonElement.classList.add(this._inactiveButtonClass);
+  buttonElement.setAttribute("disabled", true);
+}
+
 enableValidation() {
   this._formElement.addEventListener("submit", (event) => {event.preventDefault(); });
   this._setEventListeners();

@@ -1,3 +1,5 @@
+import {openPopupImage} from './index.js';
+
 class Card {
   constructor (name, link, selector) {
     this._name = name;
@@ -14,13 +16,14 @@ class Card {
     this._element = null;
   }
 
-  _likeHandler(evt) {
+  _likeHandler() {
     this._element.querySelector('.element__like').classList.toggle('element__like_active');
   }
 
   _setListeners() {
     this._element.querySelector('.element__trash-bin').addEventListener('click', () => this._deleteHandler());
     this._element.querySelector('.element__like').addEventListener('click', () => this._likeHandler());
+    this._element.querySelector('.element__picture').addEventListener("click", openPopupImage);
   }
 
   getElement(){

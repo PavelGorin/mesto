@@ -46,8 +46,6 @@ const initialCards = [
 initialCards.forEach(({name, link})=>{
     const card = new Card(name, link,  config.card);
     const element = card.getElement();
-    const popupImage = element.querySelector(".element__picture");
-    popupImage.addEventListener("click", openPopupImage);
     config.cardsList.prepend(element);
 })
 
@@ -55,8 +53,6 @@ const addCard = (event) => {
     event.preventDefault();
     const card = new Card(config.name.value, config.link.value,  config.card);
     const element = card.getElement();
-    const popupImage = element.querySelector(".element__picture");
-    popupImage.addEventListener("click", openPopupImage);
     config.cardsList.prepend(element);
     closePopupNewPlace(); 
 }
@@ -70,7 +66,7 @@ const imagePopupCloseButton = imagePopup.querySelector(
 const imagePicture = imagePopup.querySelector(".popup__picture");
 const imageName = imagePopup.querySelector(".popup__picture-name");
 
-function openPopupImage(card) {
+export function openPopupImage(card) {
   // Open popup image
   openPopup(imagePopup);
   imagePicture.src = card.target.src;
@@ -92,7 +88,8 @@ formNewPlaceSelector:".popup__container_new-place",
 }
 
 const formProfileValidator = new FormValidator(formsSelectors.formProfileSelector, validationConfig);
-formProfileValidator.enableValidation()
+formProfileValidator.enableValidation();
+
 
 const formNewPlaceValidator = new FormValidator(formsSelectors.formNewPlaceSelector, validationConfig);
 formNewPlaceValidator.enableValidation()
@@ -114,23 +111,12 @@ function openPopupProfile() {
   openPopup(popupProfile);
   inputName.value = profileName.textContent;
   inputProfession.value = profileProfession.textContent;
-  disabledButton(popupSaveButtonProfile);
+  formProfileValidator.disabledButton(popupSaveButtonProfile);
 }
 
 editButton.addEventListener("click", openPopupProfile);
 
-export function closePopupByEscape(evt) {
-  const esc = document.querySelector(".popup_opened");
-  if (evt.key === "Escape") {
-    closePopup(esc);
-  }
-}
 
-export function closePopupByOverlay(evt) {
-  if (evt.target.closest(".popup")) {
-    closePopup(evt.target);
-  }
-}
 
 function closePopupProfile() {
   closePopup(popupProfile);
@@ -164,7 +150,7 @@ function openPopupNewPlace() {
   openPopup(popupNewPlace);
   inputCardPlace.value = "";
   inputCardLink.value = "";
-  disabledButton(popupSaveButtonNewPlace);
+  formNewPlaceValidator.enableValidation(popupSaveButtonNewPlace);
 }
 
 addButton.addEventListener("click", openPopupNewPlace);
@@ -182,9 +168,5 @@ function closePopupImage() {
 
 imagePopupCloseButton.addEventListener("click", closePopupImage);
 
-function disabledButton(form) {
-  form.classList.add('popup__save-button_inactive');
-  form.setAttribute("disabled", true);
-}
 
 

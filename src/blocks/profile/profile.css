@@ -22,7 +22,7 @@
   .profile {
     padding-top: 42px;
     flex-direction: column;
-    max-width: 282px; 
+    max-width: 282px;
     flex-wrap: wrap;
   }
 }

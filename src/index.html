@@ -30,7 +30,7 @@
   <footer class="footer">
     <p class="footer__copyright">&copy;2020 Gorin Pavel</p>
   </footer>
-  <section class="popup popup__profile">
+  <section class="popup popup_profile">
     <form  action="#" class="popup__container popup__container_profile" method="post" novalidate type="submit" >
       <div class="popup__blank">
         <p class="popup__title">Редактировать профиль</p>
@@ -44,7 +44,7 @@
     </form>
   </section>
 
-  <section class="popup popup__new-place">
+  <section class="popup popup_new-place">
     <form  class="popup__container popup__container_new-place" type="submit" novalidate> 
       <div class="popup__blank">
         <p class="popup__title">Новое место</p>
@@ -58,10 +58,10 @@
     </form>
   </section>
 
-  <section class="popup popup__image">
+  <section class="popup popup_image">
     <div class="popup__container">
       <div class="popup__image-block">
-        <img class="popup__picture" src="#" alt="">
+        <img class="popup__picture" src="#" alt="#">
         <p class="popup__picture-name"></p>
       </div>
       <button type="button" class="popup__close-button popup__close-button_image"></button>
@@ -70,7 +70,7 @@
 
   <template class="card">
     <div class="element">
-      <button class="element__picture"><img class="element__image" src="#" alt=""></button>
+      <button class="element__picture"><img class="element__image" src="#" alt="#"></button>
       <button class="element__trash-bin"><img src="<%=require('./images/element__trash-bin.svg')%>" alt="Мусорное ведро"></button>
       <div class="element__info">
         <p class="element__name"></p>

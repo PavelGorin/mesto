@@ -40,7 +40,7 @@ const initialCards = [
   },
 ];
 
-const imagePopup = document.querySelector(".popup__image");
+const imagePopup = document.querySelector(".popup_image");
 
 const formsSelectors = {
   formProfileSelector:".popup__container_profile",
@@ -54,7 +54,7 @@ popupWithImage.setEventListeners();
   
 const profileName = document.querySelector(".profile__name");
 const profileProfession = document.querySelector(".profile__profession");
-const popupProfile = document.querySelector(".popup__profile");
+const popupProfile = document.querySelector(".popup_profile");
 const editButton = document.querySelector(".profile__edit-button");
 const closeEditUserProfileButton = document.querySelector(
   ".popup__close-button_profile"
@@ -101,7 +101,7 @@ const toggleEditPopup = () => {
 
 editButton.addEventListener('click', toggleEditPopup);
 
-const popupNewPlace = document.querySelector(".popup__new-place");
+const popupNewPlace = document.querySelector(".popup_new-place");
 const inputCardPlace = document.querySelector(".popup__place");
 const inputCardLink = popupNewPlace.querySelector(".popup__link");
 const addButton = document.querySelector(".profile__add-button");

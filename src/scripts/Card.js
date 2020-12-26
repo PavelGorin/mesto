@@ -1,10 +1,10 @@
-import {openPopupImage} from './index.js';
-
 class Card {
-  constructor (name, link, selector) {
-    this._name = name;
-    this._link = link;
+  constructor ({data, handleCardClick}, selector ) {
+    this._name = data.name;
+    this._link = data.link;               
     this._selector = selector;
+    this._handleCardClick = handleCardClick;
+ //   this._handleCardClickHandler = this._handleCardClickHandler.bind(this)
   }
 
   _getTemplate() {
@@ -20,10 +20,15 @@ class Card {
     this._element.querySelector('.element__like').classList.toggle('element__like_active');
   }
 
+  _handleCardClickHandler() {
+    this._handleCardClick(this._name, this._link);
+  }
+
+  
   _setListeners() {
     this._element.querySelector('.element__trash-bin').addEventListener('click', () => this._deleteHandler());
     this._element.querySelector('.element__like').addEventListener('click', () => this._likeHandler());
-    this._element.querySelector('.element__picture').addEventListener("click", openPopupImage);
+    this._element.querySelector('.element__picture').addEventListener('click', () => this._handleCardClickHandler());
   }
 
   getElement(){

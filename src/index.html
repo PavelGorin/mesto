@@ -34,9 +34,9 @@
     <form  action="#" class="popup__container popup__container_profile" method="post" novalidate type="submit" >
       <div class="popup__blank">
         <p class="popup__title">Редактировать профиль</p>
-        <input class="popup__input popup__name" id="popup-name" name="popup-name" type="text" placeholder="Имя" required minlength="2" maxlength="40">
+        <input class="popup__input popup__name" id="popup-name" name="name" type="text" placeholder="Имя" required minlength="2" maxlength="40">
         <span class="popup__input-error" id="popup-name-error"></span>
-        <input class="popup__input popup__profession" id="popup-profession" name="popup-profession" type="text" placeholder="Вид деятельности" required minlength="2" maxlength="200">
+        <input class="popup__input popup__profession" id="popup-profession" name="info" type="text" placeholder="Вид деятельности" required minlength="2" maxlength="200">
         <span class="popup__input-error" id="popup-profession-error"></span>
         <button class="popup__save-button popup__save-button_profile" >Сохранить</button>
       </div>
@@ -48,9 +48,9 @@
     <form  class="popup__container popup__container_new-place" type="submit" novalidate> 
       <div class="popup__blank">
         <p class="popup__title">Новое место</p>
-        <input class="popup__input popup__place" name="popup-place" id="popup-place" type="text" placeholder="Название" required minlength="2" maxlength="40">
+        <input class="popup__input popup__place" name="name" id="popup-place" type="text" placeholder="Название" required minlength="2" maxlength="40">
         <span class="popup__input-error" id="popup-place-error"></span>
-        <input class="popup__input popup__link" name="popup-link" id="popup-link" placeholder="Ссылка на картинку" required type="url">
+        <input class="popup__input popup__link" name="link" id="popup-link" placeholder="Ссылка на картинку" required type="url">
         <span class="popup__input-error" id="popup-link-error"></span>
         <button class="popup__save-button popup__save-button_new-place popup__save-button_inactive" >Создать</button>
       </div> +++

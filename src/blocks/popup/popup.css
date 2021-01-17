@@ -13,6 +13,7 @@
 @import url(./__input-error/_active/popup__input-error_active.css);
 @import url(./__save-button/_inactive/popup__save-button_inactive.css);
 @import url(./__input/_error-active/popup__input_error-active.css);
+@import url(./__title/_del-card/popup__title_del-card.css);
 
 
 .popup {

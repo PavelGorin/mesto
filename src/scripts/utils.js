@@ -1,33 +1,33 @@
 const initialCards = [
   {
-    name: "Архыз",
+    name: "Попарт",
     link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
+      "https://i.pinimg.com/736x/5c/5a/02/5c5a02be63c7be2c2dceaa3abb3cb77a.jpg",
   },
   {
-    name: "Челябинская область", 
+    name: "Чаплин", 
     link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
+      "https://i.pinimg.com/originals/90/38/f8/9038f8281a671925ef72cfbd882c9f27.jpg",
   },
   {
-    name: "Иваново",
+    name: "Одри",
     link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
+      "https://avatars.mds.yandex.net/get-pdb/1051324/633d4bec-a11a-459d-87a8-8cde3b95ad3b/s1200",
   },
   {
-    name: "Камчатка",
+    name: "Джон",
     link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
+      "https://i.pinimg.com/736x/90/10/ff/9010ff7ee48d81ca18768e0440b2d5df--pop-art-music-pop-art-portraits.jpg",
   },
   {
-    name: "Холмогорский район",
+    name: "Девушка",
     link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
+      "https://avatars.mds.yandex.net/get-pdb/881477/0eb2b07b-2289-4f1b-afab-e68e667cdb64/s1200?webp=false",
   },
   {
-    name: "Байкал",
+    name: "Фотограф",
     link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
+      "https://cdn.fishki.net/upload/post/2019/05/23/2987218/img-20190523-112552.jpg",
   },
 ];
 

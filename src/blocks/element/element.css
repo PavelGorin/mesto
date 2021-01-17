@@ -4,6 +4,8 @@
 @import url(./__info/element__info.css);
 @import url(./__trash-bin/element__trash-bin.css);
 @import url(./__picture/element__picture.css);
+@import url(./__number-of-likes/element__number-of-likes.css);
+@import url(./__like-box/element__like-box.css);
 
 .element {
   border-radius: 10px;

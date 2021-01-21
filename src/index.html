@@ -14,6 +14,7 @@
     </header>
     <section class="profile">
       <button class="profile__avatar-edit">
+        <img src="<%=require('./images/profile__avatar-edit.svg')%>" alt="" class="profile__edit-icon">
         <img class="profile__avatar" src="<%=require('./images/profile__avatar.jpg')%>" alt="Аватар пользователя">
       </button>
       <div class="profile__info">
@@ -33,11 +34,11 @@
     <p class="footer__copyright">&copy;2020 Gorin Pavel</p>
   </footer>
   <section class="popup popup_avatar">
-    <form  class="popup__container" type="submit" novalidate> 
+    <form  class="popup__container popup__avatar-form popup__container_avatar" type="submit" novalidate> 
       <div class="popup__blank">
         <p class="popup__title">Обновить аватар</p>
-        <input class="popup__input popup__place" type="text" placeholder="Ссылка на картинку" required minlength="2">
-        <span class="popup__input-error" id="popup-place-error"></span>
+        <input class="popup__input popup__avatar-link" type="text" placeholder="Ссылка на avatar" required minlength="2">
+        <span class="popup__input-error" id="popup-avatar-error"></span>
         <button class="popup__save-button popup__save-button_inactive" >Сохранить</button>
       </div> 
       <button type="button" class="popup__close-button popup__close-button_newplace "></button>
@@ -102,7 +103,7 @@
           <button type="button" class="element__like">
             <img src="<%=require('./images/element__like.svg')%>" alt="лайк">
           </button>
-          <p class="element__number-of-likes">252</p>
+          <p class="element__number-of-likes">0</p>
         </div>
       </div>
     </div>

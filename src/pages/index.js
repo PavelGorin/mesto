@@ -17,8 +17,6 @@ import {
   addButtonCard,
   addPopupCard,
   addFormCard,
-  newPlaceInputCard,
-  newLinkInputCard,
   viewerPopup,
   actualProfileTitle,
   actualProfileSubtitle,
@@ -28,11 +26,11 @@ import {
   avatarPopup,
   updateAvatarButton,
   avatarForm,
-  avatarUrlInput,
   waitPic,
   submitPic,
+  yesPic,
+  deletPic
 } from '../scripts/utils.js';
-
 
 let section = {};
 let renderTurn = true;
@@ -47,7 +45,6 @@ const api = new Api({
   }
 });
 
-
 const userInfoData = new UserInfo({
   titleElement: actualProfileTitle,
   subtitleElement: actualProfileSubtitle,
@@ -56,15 +53,9 @@ const userInfoData = new UserInfo({
 
 const imagePopupZoom = new PopupWithImage(viewerPopup);
 
-const handleProfileEditSubmit = () => {
-  const updatedInfo = {
-    name: titleInput.value,
-    about: subtitleInput.value
-  }
-
+const handleProfileEditSubmit = (obj) => {
   newEditPopup.renderLoading(waitPic);
-
-  api.updateUserData(updatedInfo.name, updatedInfo.about)
+  api.updateUserData(obj.title, obj.subtitle)
     .then(updatedInfo => {
       userInfoData.setUserInfo(updatedInfo);
       newEditPopup.close();
@@ -79,21 +70,14 @@ const newEditPopup = new PopupWithForm({
 
 const toggleEditPopup = () => {
   const actualUserInfo = userInfoData.getUserInfo();
-
   titleInput.value = actualUserInfo.name;
   subtitleInput.value = actualUserInfo.about;
-
   newEditPopup.renderLoading(submitPic);
   editPopupValidator.resetAllErrors();
-  
   newEditPopup.open();
 }
 
-const handleCardAddSubmit = () => {
-  const cardObj = {
-    name: newPlaceInputCard.value,
-    link: newLinkInputCard.value,
-  }
+const handleCardAddSubmit = (cardObj) => {
 
   newAddPopup.renderLoading(waitPic);
 
@@ -122,7 +106,7 @@ const toggleAddPopup = () => {
 
 const handleDeleteConfirmation = (evt, cardElement) => {
   evt.preventDefault();
-
+  newDeletePopup.renderLoading(deletPic);
   api.deleteCard(cardElement.getCardId())
     .then(() => {
       cardElement.deleteCard();
@@ -131,10 +115,9 @@ const handleDeleteConfirmation = (evt, cardElement) => {
     .catch(err => api.handleError(err))
 }
 
-const handleAvatarUpdate = () => {
-  const newAvatarUrl = avatarUrlInput.value;
+const handleAvatarUpdate = (obj) => {
   newAvatarPopup.renderLoading(waitPic);
-  api.updateAvatar(newAvatarUrl)
+  api.updateAvatar(obj.avatar)
     .then(userData => {
       actualAvatar.src = userData.avatar;
       newAvatarPopup.close();
@@ -168,6 +151,7 @@ function cardRenderer(item) {
         imagePopupZoom.open(item.link, item.name);
       },
       handleCardDelete: () => {
+        newDeletePopup.renderLoading(yesPic)
         newDeletePopup.open(card);
       },
       handleCardLike: () => {

@@ -4,6 +4,7 @@ export class PopupConfirm extends Popup {
   constructor({ popupElement, submitHandler }) {
     super(popupElement);
     this._submitHandler = submitHandler;
+    this._submitButton = this._popupElement.querySelector('.popup__save-button');
   }
 
   setEventListeners() {
@@ -16,8 +17,11 @@ export class PopupConfirm extends Popup {
   }
 
   open(element) {
-    // this._element - любой элемент, передаваемый на обработку классом
     this._element = element;
     super.open();
+  }
+
+  renderLoading(caption) {
+    this._submitButton.textContent = caption;
   }
 }

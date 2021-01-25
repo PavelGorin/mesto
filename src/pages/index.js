@@ -5,7 +5,7 @@ import { PopupWithImage } from '../scripts/PopupWithImage.js';
 import { Section } from '../scripts/Section.js';
 import { UserInfo } from '../scripts/UserInfo.js';
 import { FormValidator } from '../scripts/FormValidator.js';
-import { Api } from '../scripts/Aip.js';
+import { Api } from '../scripts/Api.js';
 import { PopupConfirm } from '../scripts/PopupConfirm.js';
 import {
   conf,

@@ -3,7 +3,7 @@ const conf = {
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save-button',
   inactiveButtonClass: 'popup__save-button_inactive',
-  errorClass: 'popup__form-error_active',
+  errorClass: 'popup__input-error_active',
   inputErrorClass: 'popup__input_state_error'
 };
 const editButtonProfile = document.querySelector('.profile__edit-button');

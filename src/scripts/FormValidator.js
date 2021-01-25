@@ -54,7 +54,7 @@ export class FormValidator {
   };
 
   resetAllErrors() {
-    const errorInputList = Array.from(this._form.querySelectorAll('.popup__input_state_error'));
+    const errorInputList = Array.from(this._form.querySelectorAll('.popup__input-error_active'));
     const errorMessageList = Array.from(this._form.querySelectorAll('.popup__form-error_active'));
 
     if (errorInputList.length > 0) {

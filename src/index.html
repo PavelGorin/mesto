@@ -13,8 +13,9 @@
       <img class="header__logo" src="<%=require('./images/header__logo.svg')%>" alt="логотип">
     </header>
     <section class="profile">
-      <button class="profile__avatar-edit">
-        <img src="<%=require('./images/profile__avatar-edit.svg')%>" alt="" class="profile__edit-icon">
+      <button class="profile__avatar-section">
+        <img src="<%=require('./images/profile__avatar-edit.svg')%>" alt="иконка редактирования"
+          class="profile__avatar-button">
         <img class="profile__avatar" src="<%=require('./images/profile__avatar.jpg')%>" alt="Аватар пользователя">
       </button>
       <div class="profile__info">
@@ -34,51 +35,57 @@
     <p class="footer__copyright">&copy;2020 Gorin Pavel</p>
   </footer>
   <section class="popup popup_avatar">
-    <form  class="popup__container popup__avatar-form popup__container_avatar" type="submit" novalidate> 
+    <form class="popup__container popup__avatar-form popup__container_avatar" novalidate name="update-avatar">
       <div class="popup__blank">
         <p class="popup__title">Обновить аватар</p>
-        <input class="popup__input popup__avatar-link" type="text" placeholder="Ссылка на avatar" required minlength="2">
-        <span class="popup__input-error" id="popup-avatar-error"></span>
-        <button class="popup__save-button popup__save-button_inactive" >Сохранить</button>
-      </div> 
-      <button type="button" class="popup__close-button popup__close-button_newplace "></button>
+        <input class="popup__input popup__avatar-link" type="url" name="avatarLink" placeholder="Ссылка на avatar"
+          id="avatar-url" required minlength="2">
+        <span class="popup__input-error" id="avatar-url-error"></span>
+        <button class="popup__save-button popup__save-button_inactive" type="submit">Сохранить</button>
+      </div>
+      <button type="button" class="popup__close-button popup__close-button_avatar"></button>
     </form>
   </section>
 
   <section class="popup popup_profile">
-    <form  action="#" class="popup__container popup__container_profile" method="post" novalidate type="submit" >
+    <form action="#" class="popup__container popup__container_profile" name="edit-profile" novalidate>
       <div class="popup__blank">
         <p class="popup__title">Редактировать профиль</p>
-        <input class="popup__input popup__name" id="popup-name" name="name" type="text" placeholder="Имя" required minlength="2" maxlength="40">
-        <span class="popup__input-error" id="popup-name-error"></span>
-        <input class="popup__input popup__profession" id="popup-profession" name="info" type="text" placeholder="Вид деятельности" required minlength="2" maxlength="200">
-        <span class="popup__input-error" id="popup-profession-error"></span>
-        <button class="popup__save-button popup__save-button_profile" >Сохранить</button>
+        <input class="popup__input popup__name" id="edit-title" name="title" type="text" placeholder="Имя" required
+          minlength="2" maxlength="40">
+        <span class="popup__input-error" id="edit-title-error"></span>
+        <input class="popup__input popup__profession" id="edit-subtitle" name="subtitle" type="text"
+          placeholder="Вид деятельности" required minlength="2" maxlength="200">
+        <span class="popup__input-error" id="edit-subtitle-error"></span>
+        <button class="popup__save-button popup__save-button_profile" type="submit">Сохранить</button>
       </div>
       <button type="button" class="popup__close-button popup__close-button_profile"></button>
     </form>
   </section>
 
   <section class="popup popup_new-place">
-    <form  class="popup__container popup__container_new-place" type="submit" novalidate> 
+    <form class="popup__container popup__container_new-place" name="add-place" novalidate>
       <div class="popup__blank">
         <p class="popup__title">Новое место</p>
-        <input class="popup__input popup__place" name="name" id="popup-place" type="text" placeholder="Название" required minlength="2" maxlength="40">
-        <span class="popup__input-error" id="popup-place-error"></span>
-        <input class="popup__input popup__link" name="link" id="popup-link" placeholder="Ссылка на картинку" required type="url">
-        <span class="popup__input-error" id="popup-link-error"></span>
-        <button class="popup__save-button popup__save-button_new-place popup__save-button_inactive" >Создать</button>
-      </div> 
-      <button type="button" class="popup__close-button popup__close-button_newplace "></button>
+        <input class="popup__input popup__place" name="placeName" id="add-name" type="text" placeholder="Название"
+          required minlength="2" maxlength="40">
+        <span class="popup__input-error" id="add-name-error"></span>
+        <input class="popup__input popup__link" name="placeLink" id="add-url" placeholder="Ссылка на картинку" required
+          type="url">
+        <span class="popup__input-error" id="add-url-error"></span>
+        <button class="popup__save-button popup__save-button_new-place popup__save-button_inactive"
+          type="submit">Создать</button>
+      </div>
+      <button type="button" class="popup__close-button popup__close-button_newplace"></button>
     </form>
   </section>
 
   <section class="popup popup_del-card">
-    <form  class="popup__container" type="submit"> 
+    <form class="popup__container" novalidate name="confirm-delete">
       <div class="popup__blank">
         <p class="popup__title popup__title_del-card">Вы уверены?</p>
-        <button class="popup__save-button">Да</button>
-      </div> 
+        <button class="popup__save-button" type="submit">Да</button>
+      </div>
       <button type="button" class="popup__close-button popup__close-button_newplace"></button>
     </form>
   </section>
@@ -96,9 +103,10 @@
   <template class="card">
     <div class="element">
       <button class="element__picture"><img class="element__image" src="#" alt="#"></button>
-      <button class="element__trash-bin"><img src="<%=require('./images/element__trash-bin.svg')%>" alt="Мусорное ведро"></button>
+      <button class="element__trash-bin"><img src="<%=require('./images/element__trash-bin.svg')%>"
+          alt="Мусорное ведро"></button>
       <div class="element__info">
-        <p class="element__name"></p>
+        <p class="element__name">name</p>
         <div class="element__like-box">
           <button type="button" class="element__like">
             <img src="<%=require('./images/element__like.svg')%>" alt="лайк">

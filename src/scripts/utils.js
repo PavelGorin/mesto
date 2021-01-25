@@ -1,36 +1,58 @@
-const initialCards = [
-  {
-    name: "Попарт",
-    link:
-      "https://i.pinimg.com/736x/5c/5a/02/5c5a02be63c7be2c2dceaa3abb3cb77a.jpg",
-  },
-  {
-    name: "Чаплин", 
-    link:
-      "https://i.pinimg.com/originals/90/38/f8/9038f8281a671925ef72cfbd882c9f27.jpg",
-  },
-  {
-    name: "Одри",
-    link:
-      "https://avatars.mds.yandex.net/get-pdb/1051324/633d4bec-a11a-459d-87a8-8cde3b95ad3b/s1200",
-  },
-  {
-    name: "Джон",
-    link:
-      "https://i.pinimg.com/736x/90/10/ff/9010ff7ee48d81ca18768e0440b2d5df--pop-art-music-pop-art-portraits.jpg",
-  },
-  {
-    name: "Девушка",
-    link:
-      "https://avatars.mds.yandex.net/get-pdb/881477/0eb2b07b-2289-4f1b-afab-e68e667cdb64/s1200?webp=false",
-  },
-  {
-    name: "Фотограф",
-    link:
-      "https://cdn.fishki.net/upload/post/2019/05/23/2987218/img-20190523-112552.jpg",
-  },
-];
+const conf = {
+  formSelector: '.popup__container',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__save-button',
+  inactiveButtonClass: 'popup__save-button_inactive',
+  errorClass: 'popup__form-error_active',
+  inputErrorClass: 'popup__input_state_error'
+};
+const editButtonProfile = document.querySelector('.profile__edit-button');
+const editPopupProfile = document.querySelector('.popup_profile');
+const editFormProfile = editPopupProfile.querySelector('form[name="edit-profile"]');
+const titleInput = editPopupProfile.querySelector('input[name="title"]');
+const subtitleInput = editPopupProfile.querySelector('input[name="subtitle"]');
+const addButtonCard = document.querySelector('.profile__add-button');
+const addPopupCard = document.querySelector('.popup_new-place');
+const addFormCard = addPopupCard.querySelector('form[name="add-place"]');
+const newPlaceInputCard = addPopupCard.querySelector('input[name="placeName"]');
+const newLinkInputCard = addPopupCard.querySelector('input[name="placeLink"]');
+const viewerPopup = document.querySelector('.popup_image');
+const popupPhoto = viewerPopup.querySelector('.popup__picture');
+const updateAvatarButton = document.querySelector('.profile__avatar-button');
+const avatarPopup = document.querySelector('.popup_avatar');
+const avatarForm = document.querySelector('form[name="update-avatar"]');
+const avatarUrlInput = document.querySelector('input[name="avatarLink"]');
+const deletePopup = document.querySelector('.popup_del-card');
+const actualProfileTitle = document.querySelector('.profile__name');
+const actualProfileSubtitle = document.querySelector('.profile__profession');
+const actualAvatar = document.querySelector('.profile__avatar');
+const actualUserId = '00be17c9136dba8124e035ee';
+const waitPic = 'Сохранение...';
+const submitPic = 'Сохранить';
 
 export {
-  initialCards
+  conf,
+  editButtonProfile,
+  editPopupProfile,
+  editFormProfile,
+  titleInput,
+  subtitleInput,
+  addButtonCard,
+  addPopupCard,
+  addFormCard,
+  newPlaceInputCard,
+  newLinkInputCard,
+  viewerPopup,
+  popupPhoto,
+  actualProfileTitle,
+  actualProfileSubtitle,
+  actualAvatar,
+  deletePopup,
+  actualUserId,
+  avatarPopup,
+  updateAvatarButton,
+  avatarForm,
+  avatarUrlInput,
+  waitPic,
+  submitPic
 }

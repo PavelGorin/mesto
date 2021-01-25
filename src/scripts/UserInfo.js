@@ -1,23 +1,21 @@
-class UserInfo {
-  constructor({profileName, profileProfession, profileAvatar}){
-    this._profileName = profileName;
-    this._profileProfession = profileProfession;
-    this._profileAvatar = profileAvatar;
+export class UserInfo {
+  constructor({ titleElement, subtitleElement, avatarElement }) {
+    this._titleElement = titleElement;
+    this._subtitleElement = subtitleElement;
+    this._avatarElement = avatarElement;
   }
 
   getUserInfo() {
     return {
-      name: this._profileName.textContent,
-      info: this._profileProfession.textContent,
-      avatar: this._profileAvatar.src
+      name: this._titleElement.textContent,
+      about: this._subtitleElement.textContent,
+      avatar: this._avatarElement.src
     }
   }
 
-  setUserInfo(data) {
-    this._profileName.textContent = data.name;
-    this._profileProfession.textContent = data.info;
-    this._profileAvatar.src = data.avatar;
+  setUserInfo(userData) {
+    this._titleElement.textContent = userData.name;
+    this._subtitleElement.textContent = userData.about;
+    this._avatarElement.src = userData.avatar;
   }
 }
-
-export default UserInfo;

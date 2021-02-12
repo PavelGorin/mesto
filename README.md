@@ -46,8 +46,8 @@ Using JavaScript done:
 <li> likes on cards
 <li> opening a pop-up with an image
 <li> form validation
-< < li> closing popups by pressing Esc or clicking on the overlay
-< li> confirm deletion of created cards
+<li> closing popups by pressing Esc or clicking on the overlay
+<li> confirm deletion of created cards
 
 The project serves as a demonstration of the mastered web development technologies.
 
